@@ -38,7 +38,6 @@ import java.util.*;
 //     };
 
 
-
 //!print start pattern 3
 // 1
 // 12
@@ -55,8 +54,6 @@ import java.util.*;
 //         }
 // }
 // };
-
-
 
 //!print start pattern 4
 // 4
@@ -78,3 +75,5 @@ import java.util.*;
 //         } 
 //     }
 // }
+
+
