@@ -14,7 +14,6 @@ import java.util.*;
 // }
 // }
 
-
 // ! Array as an function arguments
 // public class arraysCC {
 // public static void update(int marks[]) {
@@ -31,8 +30,6 @@ import java.util.*;
 // System.out.println();
 // }
 // }
-
-
 
 // ! LINEAR SEARCH
 // public class arraysCC {
@@ -57,8 +54,6 @@ import java.util.*;
 // }
 // }
 
-
-
 // ! LARGEST And SMALLEST IN ARRAY
 // public class arraysCC {
 // public static void getLargest(int number[]){
@@ -80,8 +75,6 @@ import java.util.*;
 // getLargest(number);
 // }
 // }
-
-
 
 // ! BINERY SEARCH
 // public class arraysCC {
@@ -109,8 +102,6 @@ import java.util.*;
 //     }
 // }
 
-
-
 //! reverse array
 // public class arraysCC {
 //     public static void reverseArray(int num[]){
@@ -127,9 +118,126 @@ import java.util.*;
 //     public static void main(String[] args) {
 //         int num[]= {1,2,3,4,5};
 //         reverseArray(num);
-
 //         for (int i = 0; i < num.length; i++) {
 //             System.out.print(num[i]);
 //         }
 //     }
 // }
+
+//! Paires in array
+
+// public class arraysCC {
+//     public static void printPairs(int num[]) {
+//         for (int i = 0; i < num.length; i++) {
+//             int curr = num[i];
+//             for (int j = i + 1; j < num.length; j++) {
+//                 System.out.print("(" + curr + "," + num[j] + ")");
+//             }
+//             System.out.println();    
+//         }
+//     }
+//     public static void main(String[] args) {
+//         int num[] = { 2, 4, 6, 8, 10 };
+//         printPairs(num);
+//     }
+// }
+
+// //! Subarray Print
+// public class arraysCC {
+//     public static void subArray(int num[]){
+//         for(int i=0; i<num.length; i++){
+//                     int start=i;
+//             for(int j=i; j<num.length; j++){
+//                     int end = j;
+//                 for(int k=start; k<=end; k++){
+//                     System.out.print(num[k]+" ");
+//                 }System.out.println();
+//             }System.out.println();
+//         }
+//     }
+//     public static void main(String[] args) {
+//         int num[] = {1 ,2, 3, 4, 5};
+//         subArray(num);   
+//     }   
+// }
+
+//! max SubArray Sum (Prefix Sum)
+
+// public class arraysCC {
+
+//     // Method to calculate the maximum subarray sum using prefix sums
+//     public static void PrefixSubarray_Sum(int num[]) {
+
+//         // Array to store prefix sums
+//         int prefix[] = new int[num.length];
+
+//         // Variables to store current sum and maximum sum found
+//         int currSum = 0;
+//         int maxSum = Integer.MIN_VALUE;
+
+//         // Initialize the first element of prefix array
+//         prefix[0] = num[0];
+
+//         // Calculate the prefix sums for the array
+//         for (int i = 1; i < prefix.length; i++) {
+//             prefix[i] = prefix[i - 1] + num[i];
+//         }
+
+//         // Iterate over all possible subarrays
+//         for (int i = 0; i < num.length; i++) {
+//             int start = i;
+//             for (int j = i; j < num.length; j++) {
+//                 int end = j;
+
+//                 // Calculate the sum of the current subarray using prefix sums
+//                 currSum = start == 0 ? prefix[end] : prefix[end] - prefix[start - 1];
+
+//                 // Update maxSum if current subarray sum is greater
+//                 if (maxSum < currSum) {
+//                     maxSum = currSum;
+//                 }
+//             }
+//         }
+
+//         // Print the maximum subarray sum
+//         System.out.println("max sum = " + maxSum);
+//     }
+
+//     public static void main(String[] args) {
+//         // Test array
+//         int num[] = { 1, -2, 6, -1, 3 };
+
+//         // Call the method to find the maximum subarray sum
+//         PrefixSubarray_Sum(num);
+//     }
+// }
+
+//! SubArray sum (Kadane's Algorithem)
+
+// public class arraysCC {
+//     public static void kadanes(int num[]){
+//         int ms = Integer.MIN_VALUE;
+//         int cs = 0;
+
+//         for(int i=0; i<num.length; i++){
+//             cs = cs + num[i];
+//             if(cs < 0){
+//                 cs = 0;
+//             }
+//             ms = Math.max(cs, ms);
+//         }
+//         System.out.println("Our max SubArray sum is : " + ms);
+//     }
+// public static void main(String[] args) {
+//     int num[] = {-2, -3, 4, -1, -2, 1, 5, -3};
+//     kadanes(num);
+// }   
+// }
+
+//! Trapping Rain water problem
+
+public class arraysCC {
+    public static void main(String[] args) {
+        
+    }
+}
