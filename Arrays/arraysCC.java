@@ -283,12 +283,12 @@ import java.util.*;
 //         }
 //         return maxProfit;
 //     }
-
 //     public static void main(String[] args) {
 //         int price[] = { 7, 1, 5, 3, 6, 4 };
 //         System.out.println("max profit is " + BuyAndSellStocks(price));
 //     }
 // }
+
 
 
 //! There is an integer array nums sorted in ascending order (with distinct values).
@@ -301,38 +301,37 @@ import java.util.*;
 //! index of target if it is in nums, or -1 if it is not in nums.
 //! You must write an algorithm with O(log n) runtime complexity
 
+// public class arraysCC {
+//     public static int roated_Array_Search(int num[], int target){
+//         int left = 0; 
+//         int right = num.length - 1;
+//         while(left <= right){
+//             int mid =left + (right - left) / 2; //Prevent overflow
 
-public class arraysCC {
-    public static int roated_Array_Search(int num[], int target){
-        int left = 0; 
-        int right = num.length - 1;
-        while(left <= right){
-            int mid =left + (right - left) / 2; //Prevent overflow
-
-            if(num[mid] == target){
-                return mid;
-            }
-            //Determined which part of array is sorted
-            if(num[left] <= num[mid]){//left part is sorted
-                if(num[left] <= target && target < num[mid]){
-                    right = mid - 1;
-                }else{
-                    left = left + 1; 
-                }
-            }else{// right part is sorted   
-                if(num[mid] < target && target < num[right]){
-                    left = mid + 1; //target  is in the left part
-                }else{
-                    right = mid - 1; //target is in the right part 
-                }
-            }
-        } 
-        //if target is not found 
-        return -1;
-    }
-public static void main(String[] args) {
-    int num[] = {4, 5, 6, 7, 0, 1, 2};
-    int target = 0;
-    System.out.println(roated_Array_Search(num, target));
-}
-}
+//             if(num[mid] == target){
+//                 return mid;
+//             }
+//             //Determined which part of array is sorted
+//             if(num[left] <= num[mid]){//left part is sorted
+//                 if(num[left] <= target && target < num[mid]){
+//                     right = mid - 1;
+//                 }else{
+//                     left = left + 1; 
+//                 }
+//             }else{// right part is sorted   
+//                 if(num[mid] < target && target < num[right]){
+//                     left = mid + 1; //target  is in the left part
+//                 }else{
+//                     right = mid - 1; //target is in the right part 
+//                 }
+//             }
+//         } 
+//         //if target is not found 
+//         return -1;
+//     }
+// public static void main(String[] args) {
+//     int num[] = {4, 5, 6, 7, 0, 1, 2};
+//     int target = 0;
+//     System.out.println(roated_Array_Search(num, target));
+// }
+// }
