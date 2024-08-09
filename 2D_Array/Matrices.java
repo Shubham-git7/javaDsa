@@ -136,34 +136,34 @@ import java.util.*;
 
 //! Search in sorted matrix
 
-public class Matrices {
-    public static boolean sortedMatrix(int num[][], int key){
-        int row=0;
-        int col = num[0].length -1;
+// public class Matrices {
+//     public static boolean sortedMatrix(int num[][], int key){
+//         int row=0;
+//         int col = num[0].length -1;
 
-        while(row<num.length && col >=0){
-            if(num[row][col] == key){
-                System.out.println("the key found at index : " + row +","+ col);
-                return true;
-            }
-            else if(key <= num[row][col]){
-                col--;
-            }
-            else{
-                row++;
-            }
-        }
-        System.out.println("key not fouund");
-        return false;
-    }
-    public static void main(String[] args) {
-        int num[][] = { { 1, 2, 3, 4 },
-                { 5, 6, 7, 8 },
-                { 9, 10, 11, 12 },
-                { 13, 14, 15, 16 } };
+//         while(row<num.length && col >=0){
+//             if(num[row][col] == key){
+//                 System.out.println("the key found at index : " + row +","+ col);
+//                 return true;
+//             }
+//             else if(key <= num[row][col]){
+//                 col--;
+//             }
+//             else{
+//                 row++;
+//             }
+//         }
+//         System.out.println("key not fouund");
+//         return false;
+//     }
+//     public static void main(String[] args) {
+//         int num[][] = { { 1, 2, 3, 4 },
+//                 { 5, 6, 7, 8 },
+//                 { 9, 10, 11, 12 },
+//                 { 13, 14, 15, 16 } };
 
-        int key = 11;
+//         int key = 111;
         
-         sortedMatrix(num, key);
-    }
-}
+//          sortedMatrix(num, key);
+//     }
+// }
